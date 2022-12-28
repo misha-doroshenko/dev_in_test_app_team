@@ -23,3 +23,4 @@ def run_appium_server():
 def driver(run_appium_server):
     driver = webdriver.Remote('http://localhost:4723/wd/hub', android_get_desired_capabilities())
     yield driver
+    driver.quit()
